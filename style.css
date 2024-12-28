@@ -1,0 +1,298 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* start */
+
+body{
+    background-color: black;
+    font-family: "Poppins", serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo navbar"
+                          " imgs content";
+    overflow: auto;                      
+
+                          
+}
+/* ----------------------------------header --------------------- */
+.logo{
+    grid-area: logo;  
+    background-color: rgb(240, 157, 4);
+    height: 10vh;
+    align-items: center;
+    transition: color 0.4s ease;
+}
+.logo h2{
+    grid-area: "logo";
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    padding: 10px 40px;
+    align-items: center;
+    font-size: 30px;
+}
+.logo h2:hover{
+    text-shadow: 0 0 5px rgb(240, 157, 4);
+    color: rgb(240, 157, 4);
+
+}
+.navbar {
+    grid-area: navbar;
+    background-color: rgb(240, 157, 4);
+    height: 10vh;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul li  {
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: bold;  
+    align-items: center;
+}
+.navbar ul li a{
+    color: white;
+    transition: color 0.3s ease;
+}
+.navbar.logo,:hover{
+    background-color: black;
+}
+.navbar ul li a:hover{
+    color: rgb(240, 157, 4);    
+}
+
+/* ------------------------------------------------------------content */
+
+
+.content{
+    grid-area: content;
+    display: flex;
+    margin: 0;
+    padding-left: 130px;
+    padding-top: 75px;
+    flex-direction: column;
+   
+}
+.content h2{
+    color: white; 
+    font-size: 40px;
+}
+.content h2 span{
+    color: rgb(240, 157, 4);
+    text-shadow: 0 0 10px rgb(240, 157, 4);
+    font-size: 40px;
+}
+.typeing{
+    display: inline-flex;
+    color: white;
+    font-size: 30px;  
+    font-weight: bold;
+}
+
+
+ .secnd-text li {
+    color:rgb(240, 157, 4);
+    text-shadow: 0 0 10px rgb(240, 157, 4);
+    padding: 0 10px;
+    top: 0;
+    animation: slide 3s steps(4) infinite ;
+    position: relative;
+   
+  
+}
+/* /* @keyframes slide{
+    100% {
+       top: -360px;   
+    }
+    
+}  */
+.secnd-text li span{
+    position: relative;
+    
+}
+.secnd-text li span::after{
+    content: '';
+    position: absolute;
+    left:0 ;
+    width: 400px;
+    height: 40px;
+    background:black;
+    border-left: 5px solid rgb(240, 157, 4);
+    animation: typing 1.5s steps(10) infinite alternate;
+    
+    
+}
+
+@keyframes typing{
+    100% {
+        left: 100%;
+        margin: 0 -35PX 0 35px;
+        
+    }
+}
+
+/* ------------------------------- image --------------------- */
+
+
+.imgs{
+    display: flex;
+    grid-area: imgs;
+    /* padding-top: 75px; 
+    padding-left: 40px; */
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.imgs img{
+    border-radius: 50%;
+    height: 75%;
+    
+    
+}
+.imgs img:hover{
+    animation: big 1.5s ease-in-out;
+    box-shadow: 0 0 10px rgb(240, 157, 4),
+                0 0 50px rgb(240, 157, 4);
+                cursor: pointer;
+}
+@keyframes big{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
+    }
+}
+
+
+/*------------------------------------------------------ mini content lorem  */
+
+
+.minicontent{
+    max-width: 460px;
+    color: white;
+    font-weight: 100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+/* ------------------------------------social links ------------------------------------------------------------------*/
+
+
+.social ul {
+    display: flex;
+   
+}
+.social ul li {
+    padding: 10px 20px;
+}
+.social ul li a i {
+    color: rgb(240, 157, 4);
+    padding-left: 10px;
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(240, 157, 4);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: 0.2 linear;
+      
+}
+.social ul li a i:hover{
+    background-color:black;
+    color: black;
+    background-color:rgb(240, 157, 4);
+    scale: 1.3s;
+}
+
+/*  button download cv */
+
+.btn{
+    padding-top: 10px;
+    margin-left: 39px;
+    
+}
+.btn a{
+    width: 50%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgb(240, 157, 4);
+    border: none;
+    transition: 0.2 linear;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+.btn a span{
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.btn :hover{
+    background-color: black;
+    box-shadow: 0 0 5px rgb(240, 157, 4),
+                 0 0 25px rgb(240, 157, 4),
+                 0 0 50px rgb(240, 157, 4),
+                 0 0 200px rgb(240, 157, 4);
+
+}
+.btn a span:hover{
+    color: rgb(240, 157, 4);
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+
+
+/* -------- media querry----------- */
+
+
+@media (max-width :768px){
+    .container{
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "logo"
+                             " navbar"
+                              " imgs"
+                               "content";
+        overflow: auto; 
+}
+.navbar {
+    grid-area: "navbar";
+    background-color: rgb(240, 157, 4);
+    height: 10vh;
+    width: 394px;
+}
+}
